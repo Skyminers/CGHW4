@@ -1,3 +1,3 @@
-# git_test
+# gltest
 
-This is a project for testing git.
+This is a project for testing opengl.

@@ -14,9 +14,9 @@ if(WIN32)
 endif()
 
 if(APPLE)
-    set(GLEW_H /usr/local/Cellar/glew/2.1.0_1/include/GL)
-    set(GLFW_H /usr/local/Cellar/glfw/3.3.2/include/GLFW)
-    set(GLAD_H /usr/local/include/glad)
+    set(GLEW_H /usr/local/Cellar/glew/2.1.0_1/include)
+    set(GLFW_H /usr/local/Cellar/glfw/3.3.2/include)
+    set(GLAD_H /usr/local/include)
     set(KH_H /usr/local/include/KHR)
     include_directories(${GLEW_H} ${GLFW_H} ${GLAD_H} ${KH_H})
 

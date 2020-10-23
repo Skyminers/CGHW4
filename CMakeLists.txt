@@ -18,7 +18,7 @@ if(APPLE)
     set(GLFW_H /usr/local/Cellar/glfw/3.3.2/include)
     set(GLAD_H /usr/local/include)
     set(KH_H /usr/local/include/KHR)
-    include_directories(${GLEW_H} ${GLFW_H} ${GLAD_H} ${KH_H})
+    include_directories(${GLEW_H} ${GLFW_H} ${GLAD_H} ${KH_H} ${PROJECT_SOURCE_DIR}/include)
 
 # 添加目标链接
     set(GLEW_LINK /usr/local/Cellar/glew/2.1.0_1/lib/libGLEW.2.1.dylib)

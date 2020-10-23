@@ -1,3 +1,3 @@
-# gltest
+# zju CG HW4
 
-This is a project for testing opengl.
+计算机图形学作业

@@ -5,7 +5,6 @@
 #include "Sphere.h"
 
 Sphere::Sphere(float radius, int xFragment, int yFragment) {
-    srand(time(NULL));
     const double PI = acos(-1);
     for(int y = 0; y <= yFragment; ++ y){
         for(int x = 0; x <= xFragment; ++ x){

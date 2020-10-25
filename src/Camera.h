@@ -10,7 +10,7 @@
 #include <glm/gtc/matrix_transform.hpp>
 
 enum cameraMovement{
-    FORWARD, BACKWARD, LEFT, RIGHT
+    FORWARD, BACKWARD, LEFT, RIGHT, UP, DOWN
 };
 
 class Camera {

@@ -49,6 +49,12 @@ void Camera::processKey(cameraMovement move, float deltaTime) {
         case RIGHT:
             Position += Right * moveLen;
             break;
+        case UP:
+            Position += Up * moveLen;
+            break;
+        case DOWN:
+            Position -= Up * moveLen;
+            break;
     }
 }
 

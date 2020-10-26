@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.17)
-project(gltest)
+project(SolarSystem)
 
 set(CMAKE_CXX_STANDARD 14)
 
@@ -8,7 +8,7 @@ if(WIN32)
 
     link_directories(${PROJECT_SOURCE_DIR}/lib/windows)
 
-    add_executable(gltest ${PROJECT_SOURCE_DIR}/src/main.cpp ${PROJECT_SOURCE_DIR}/src/glad.c
+    add_executable(SolarSystem ${PROJECT_SOURCE_DIR}/src/main.cpp ${PROJECT_SOURCE_DIR}/src/glad.c
             ${PROJECT_SOURCE_DIR}/src/Shaders.cpp ${PROJECT_SOURCE_DIR}/src/Camera.cpp ${PROJECT_SOURCE_DIR}/src/Sphere.cpp)
 
     target_link_libraries(SolarSystem glfw3)

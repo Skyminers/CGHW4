@@ -49,6 +49,7 @@ void Shaders::setMat4(const std::string &name, const glm::mat4 &mat) const{
 
 
 Shaders::Shaders(const char* vertexShaderFile, const char* fragmentShaderFile){
+#ifdef READ_FILE
     std::string vertexSource;
     std::string fragmentSource;
     std::ifstream vShaderFile;
@@ -71,6 +72,31 @@ Shaders::Shaders(const char* vertexShaderFile, const char* fragmentShaderFile){
     }
     const char* vShaderSource = vertexSource.c_str();
     const char* fShaderSource = fragmentSource.c_str();
+#else
+    static const char * vShaderSource = "#version 330 core\n"
+                                        "layout (location = 0) in vec3 aPos;\n"
+                                        "layout (location = 1) in vec3 aColor;\n"
+                                        "\n"
+                                        "out vec3 ourColor;\n"
+                                        "\n"
+                                        "uniform mat4 model;\n"
+                                        "uniform mat4 view;\n"
+                                        "uniform mat4 projection;\n"
+                                        "uniform bool sun;\n"
+                                        "\n"
+                                        "void main() {\n"
+                                        "    gl_Position = projection * view * model * vec4(aPos, 1);\n"
+                                        "    if(sun) ourColor = vec3(0.5f, 1.0f, 0);\n"
+                                        "    else ourColor = aColor;\n"
+                                        "}\0";
+    static const char * fShaderSource = "#version 330 core\n"
+                                        "out vec4 FragColor;\n"
+                                        "in vec3 ourColor;\n"
+                                        "\n"
+                                        "void main() {\n"
+                                        "    FragColor = vec4(ourColor, 1.0);//vec4(1.0, 0.5, 0.2, 1.0);\n"
+                                        "}\0";
+#endif
     unsigned int vertex, fragment;
 
     vertex = glCreateShader(GL_VERTEX_SHADER);

@@ -8,7 +8,7 @@
 
 太阳的颜色使用纯黄色， 其他行星、卫星的颜色为花色。
 
-/截屏2020-10-26 上午1.58.27.png
+![运行截图](https://github.com/Skyminers/CGHW4/blob/master/img/Screen%20Shot.png)
 
 > 由于我使用的是glfw+glm库，所以助教可能没有办法进行编译，所以我在这里提供了exe可执行文件以及Unix可执行文件
 

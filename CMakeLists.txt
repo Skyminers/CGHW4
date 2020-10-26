@@ -11,7 +11,7 @@ if(WIN32)
     add_executable(gltest ${PROJECT_SOURCE_DIR}/src/main.cpp ${PROJECT_SOURCE_DIR}/src/glad.c
             ${PROJECT_SOURCE_DIR}/src/Shaders.cpp ${PROJECT_SOURCE_DIR}/src/Camera.cpp ${PROJECT_SOURCE_DIR}/src/Sphere.cpp)
 
-    target_link_libraries(gltest glfw3)
+    target_link_libraries(SolarSystem glfw3)
 endif()
 
 if(APPLE)
@@ -30,8 +30,8 @@ if(APPLE)
 # 这个glad.c在第2步中说过要拉到项目中，注意路径
     set(SOURCE_FILES src/glad.c src/main.cpp src/Shaders.cpp src/Camera.cpp src/Sphere.cpp)
 
-    add_executable(test ${SOURCE_FILES})
+    add_executable(SolarSystem ${SOURCE_FILES})
 
-    target_link_libraries(test "-framework OpenGL")
-    target_link_libraries(test "-framework GLUT")
+    target_link_libraries(SolarSystem "-framework OpenGL")
+    target_link_libraries(SolarSystem "-framework GLUT")
 endif()
